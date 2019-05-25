@@ -4,6 +4,11 @@
   <img src="./src/assets/images/header.png">
 </p>
 
+<div align="center">
+  <a href="https://cranky-hypatia-4af44c.netlify.com">Demo !</a>
+</div>
+
+
 React boilerplate using the latest version of react-redux with Hooks (useDispatch, useSelector) and other cool things like **Immutable**, **Redux-saga**, **Styled-components**. The app itself is a simple but cute counter !
 
 ## Installation
