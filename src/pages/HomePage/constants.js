@@ -1,0 +1,2 @@
+export const INCREMENT_COUNTER = 'homepage/INCREMENT_COUNTER';
+export const DECREMENT_COUNTER = 'homepage/DECREMENT_COUNTER';
