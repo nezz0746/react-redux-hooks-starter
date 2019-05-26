@@ -13,4 +13,4 @@ React boilerplate using the latest version of react-redux with Hooks (useDispatc
 
 ## Installation
 
-`npm install && npmm start`
+`npm install && npm start`
