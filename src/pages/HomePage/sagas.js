@@ -1,6 +1,6 @@
 import { all, put, takeLatest } from 'redux-saga/effects';
-import { resetCounterSuccess, resetCounterFailure } from '../pages/HomePage/actions';
-import * as constant from '../pages/HomePage/constants';
+import { resetCounterSuccess, resetCounterFailure } from './actions';
+import * as constant from './constants';
 
 export function* doResetCounter() {
   try {
