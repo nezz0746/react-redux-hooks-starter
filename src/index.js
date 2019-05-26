@@ -1,22 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import createSagaMiddleware from 'redux-saga';
-import homeSagas from './pages/HomePage/sagas';
 import App from './App';
-import rootReducer from './redux/rootReducer';
+import {configureStore} from 'redux-starter-kit';
 
-const sagaMiddleware = createSagaMiddleware();
+import homePageReducer from './pages/HomePage/homePage';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(sagaMiddleware))
-);
-
-sagaMiddleware.run(homeSagas);
+const store = configureStore({
+    reducer : {
+        Home : homePageReducer
+    }
+});
 
 ReactDOM.render(
   <Provider store={store}>

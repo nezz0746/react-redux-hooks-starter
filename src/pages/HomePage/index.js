@@ -5,7 +5,7 @@ import {
   App, Button, Title, Image
 } from '../../style/home';
 import useClientRect from '../../hooks/useClientRect';
-import { incrementCounter, decrementCounter, resetCounterLaunched } from './actions';
+import { incrementCounter, decrementCounter, resetCounter } from './homePage';
 import Counter from '../../components/Counter';
 import logo from '../../assets/images/logo.png';
 
@@ -13,10 +13,7 @@ const HomePage = () => {
   const appRef = React.useRef(null);
   const { docX, docY } = useMouse(appRef);
   const dispatch = useDispatch();
-  const { counter, resetLoading } = useSelector(state => ({
-    counter: state.get('Home').get('counter'),
-    resetLoading: state.get('Home').get('resetLoading')
-  }), shallowEqual);
+  const { counter, resetLoading } = useSelector(state => state.Home, shallowEqual);
   const [rect, ref] = useClientRect();
   const center = getCoordinates(rect !== null ? rect : {});
 
@@ -42,7 +39,7 @@ const HomePage = () => {
       <Button type="button" onClick={increment}>+</Button>
       <Button type="button" onClick={decrement}>-</Button>
       <Counter counter={counter} />
-      <Button loading={resetLoading} type="button" onClick={() => { dispatch(resetCounterLaunched()); }}>Reset</Button>
+      <Button loading={resetLoading} type="button" onClick={() => { dispatch(resetCounter()); }}>Reset</Button>
     </App>
   );
 };
