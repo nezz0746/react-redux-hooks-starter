@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import rootSaga from './sagas';
+import homeSagas from './sagas/homeSagas';
 import App from './App';
 import rootReducer from './redux/rootReducer';
 
@@ -16,7 +16,7 @@ const store = createStore(
   composeEnhancers(applyMiddleware(sagaMiddleware))
 );
 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(homeSagas);
 
 ReactDOM.render(
   <Provider store={store}>

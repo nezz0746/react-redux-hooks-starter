@@ -10,7 +10,22 @@ const decrementCounter = counter => ({
   counter
 });
 
+const resetCounterLaunched = () => ({
+  type: constant.RESET_COUNTER_LAUNCHED
+});
+
+const resetCounterSuccess = () => ({
+  type: constant.RESET_COUNTER_SUCCESS
+});
+
+const resetCounterFailure = () => ({
+  type: constant.RESET_COUNTER_FAILURE
+});
+
 export {
   incrementCounter,
-  decrementCounter
+  decrementCounter,
+  resetCounterLaunched,
+  resetCounterSuccess,
+  resetCounterFailure
 };

@@ -10,10 +10,11 @@ const Button = styled.div`
   margin-left: 3px;
   margin-right: 3px;
   text-decoration: none;
-  border: black solid 1px;
+  border: ${props => (props.loading ? 'lightgrey solid 1px' : 'black solid 1px')};
   user-select: none;
   display: inline-block;
   outline: none;
+  color: ${props => (props.loading ? 'lightgrey' : 'black')};
 `;
 
 const Title = styled.h1`
