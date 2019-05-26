@@ -5,7 +5,6 @@ import {
   App, Button, Title, Image
 } from '../../style/home';
 import useClientRect from '../../hooks/useClientRect';
-//import { incrementCounter, decrementCounter, resetCounterLaunched } from './actions';
 import { incrementCounter, decrementCounter, resetCounter } from './homePage';
 import Counter from '../../components/Counter';
 import logo from '../../assets/images/logo.png';
