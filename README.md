@@ -1,4 +1,4 @@
-# React-redux boilerplate using hooks :fishing_pole_and_fish: :fire: .
+# React-redux boilerplate using hooks :fishing_pole_and_fish: :fire:
 
 <p align="center">
   <img src="./src/assets/images/header.png">
